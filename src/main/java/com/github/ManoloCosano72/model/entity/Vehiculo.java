@@ -1,12 +1,14 @@
 package com.github.ManoloCosano72.model.entity;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Vehiculo {
-    private int codigoVehiculo;
-    private String marca;
-    private int antiguedad;
-    private String modelo;
+    protected int codigoVehiculo;
+    protected String marca;
+    protected int antiguedad;
+    protected String modelo;
+    protected List<Pieza> piezas;
 
     public Vehiculo(int codigoVehiculo) {
         this.codigoVehiculo = codigoVehiculo;
@@ -20,6 +22,7 @@ public class Vehiculo {
         this.marca = marca;
         this.antiguedad = antiguedad;
         this.modelo = modelo;
+        this.piezas = null;
     }
 
     public int getCodigoVehiculo() {
@@ -54,6 +57,14 @@ public class Vehiculo {
         this.modelo = modelo;
     }
 
+    public List<Pieza> getPiezas() {
+        return piezas;
+    }
+
+    public void setPiezas(List<Pieza> piezas) {
+        this.piezas = piezas;
+    }
+
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
@@ -74,6 +85,7 @@ public class Vehiculo {
                 ", marca='" + marca + '\'' +
                 ", antiguedad=" + antiguedad +
                 ", modelo='" + modelo + '\'' +
+                ", piezas='" + piezas + '\'' +
                 '}';
     }
 }

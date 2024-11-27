@@ -8,12 +8,22 @@ public class Trabajador {
     protected String puesto;
     protected String nombre;
 
-    private List<Vehiculo> vehiculos;
+    protected String correo;
 
-    public Trabajador(int idTrabajador, String puesto, String nombre) {
+    protected String contrasena;
+
+    protected List<Vehiculo> vehiculos;
+
+    public Trabajador(int idTrabajador, String puesto, String nombre, String correo, String contrasena) {
         this.idTrabajador = idTrabajador;
         this.puesto = puesto;
         this.nombre = nombre;
+        this.correo = correo;
+        try {
+            setContrasena(contrasena);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         this.vehiculos = null;
     }
 
@@ -22,7 +32,7 @@ public class Trabajador {
     }
 
     public Trabajador() {
-        this(-1, "", "");
+        this(-1, "", "","","");
     }
 
     public int getIdTrabajador() {
@@ -43,6 +53,22 @@ public class Trabajador {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public void setNombre(String nombre) {
@@ -76,6 +102,7 @@ public class Trabajador {
                 "idTrabajador=" + idTrabajador +
                 ", puesto='" + puesto + '\'' +
                 ", nombre='" + nombre + '\'' +
+                " , correo='" + correo +'\'' +
                 ", vehiculos=" + vehiculos +
                 '}';
     }
