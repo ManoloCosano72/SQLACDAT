@@ -3,16 +3,20 @@ package com.github.ManoloCosano72.model.entity;
 import java.util.Objects;
 
 public class Pieza {
-    protected int idPieza;
-    protected String nombre;
-    protected String tipo;
-    protected int precio;
+    private int idPieza;
+    private Vehiculo vehiculo;
+    private String nombre;
+    private String tipo;
+    private int precio;
+    private Cliente cliente;
 
-    public Pieza(int idPieza, String nombre, String tipo, int precio) {
+    public Pieza(int idPieza, Vehiculo vehiculo, String nombre, String tipo, int precio, Cliente cliente) {
         this.idPieza = idPieza;
+        this.vehiculo = vehiculo;
         this.nombre = nombre;
         this.tipo = tipo;
         this.precio = precio;
+        this.cliente = cliente;
     }
 
     public Pieza() {
@@ -35,6 +39,22 @@ public class Pieza {
         return nombre;
     }
 
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -55,6 +75,7 @@ public class Pieza {
         this.precio = precio;
     }
 
+
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
@@ -72,9 +93,11 @@ public class Pieza {
     public String toString() {
         return "Pieza{" +
                 "idPieza=" + idPieza +
+                ", vehiculo=" + vehiculo +
                 ", nombre='" + nombre + '\'' +
                 ", tipo='" + tipo + '\'' +
                 ", precio=" + precio +
+                ", cliente=" + cliente +
                 '}';
     }
 }

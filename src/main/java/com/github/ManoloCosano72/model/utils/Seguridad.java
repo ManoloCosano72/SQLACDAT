@@ -1,4 +1,4 @@
-package com.github.ManoloCosano72.model;
+package com.github.ManoloCosano72.model.utils;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;

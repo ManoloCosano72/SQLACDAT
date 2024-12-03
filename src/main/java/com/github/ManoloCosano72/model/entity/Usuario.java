@@ -19,6 +19,9 @@ public class Usuario {
         this.esTrabajador = esTrabajador;
     }
 
+    public Usuario() {
+    }
+
     public String getNombre() {
         return nombre;
     }
