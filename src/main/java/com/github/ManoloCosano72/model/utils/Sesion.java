@@ -1,4 +1,4 @@
-package com.github.ManoloCosano72.model;
+package com.github.ManoloCosano72.model.utils;
 
 import com.github.ManoloCosano72.model.entity.Cliente;
 

@@ -3,36 +3,24 @@ package com.github.ManoloCosano72.model.entity;
 import java.util.List;
 import java.util.Objects;
 
-public class Trabajador {
-    protected int idTrabajador;
-    protected String puesto;
-    protected String nombre;
+public class Trabajador extends Usuario{
+    private int idTrabajador;
+    private String puesto;
 
-    protected String correo;
+    private List<Vehiculo> vehiculos;
 
-    protected String contrasena;
-
-    protected List<Vehiculo> vehiculos;
-
-    public Trabajador(int idTrabajador, String puesto, String nombre, String correo, String contrasena) {
-        this.idTrabajador = idTrabajador;
-        this.puesto = puesto;
-        this.nombre = nombre;
-        this.correo = correo;
-        try {
-            setContrasena(contrasena);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        this.vehiculos = null;
+    public Trabajador(String nombre, String correo, String contrasena, boolean esTrabajador) {
+        super(nombre, correo, contrasena, esTrabajador);
     }
 
-    public Trabajador(int idTrabajador) {
+    public Trabajador(String nombre, String correo, String contrasena, boolean esTrabajador, int idTrabajador, String puesto, List<Vehiculo> vehiculos) {
+        super(nombre, correo, contrasena, esTrabajador);
         this.idTrabajador = idTrabajador;
+        this.puesto = puesto;
+        this.vehiculos = vehiculos;
     }
 
     public Trabajador() {
-        this(-1, "", "","","");
     }
 
     public int getIdTrabajador() {
@@ -49,30 +37,6 @@ public class Trabajador {
 
     public void setPuesto(String puesto) {
         this.puesto = puesto;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public List<Vehiculo> getVehiculos() {
@@ -101,8 +65,6 @@ public class Trabajador {
         return "Trabajador{" +
                 "idTrabajador=" + idTrabajador +
                 ", puesto='" + puesto + '\'' +
-                ", nombre='" + nombre + '\'' +
-                " , correo='" + correo +'\'' +
                 ", vehiculos=" + vehiculos +
                 '}';
     }

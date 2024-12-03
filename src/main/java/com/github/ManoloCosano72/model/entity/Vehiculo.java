@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Objects;
 
 public class Vehiculo {
-    protected int codigoVehiculo;
-    protected String marca;
-    protected int antiguedad;
-    protected String modelo;
-    protected List<Pieza> piezas;
+    private int codigoVehiculo;
+    private String marca;
+    private int antiguedad;
+    private String modelo;
+    private List<Pieza> piezas;
+    private Trabajador trabajador;
 
     public Vehiculo(int codigoVehiculo) {
         this.codigoVehiculo = codigoVehiculo;
@@ -17,12 +18,13 @@ public class Vehiculo {
     public Vehiculo() {
     }
 
-    public Vehiculo(int codigoVehiculo, String marca, int antiguedad, String modelo) {
+    public Vehiculo(int codigoVehiculo, String marca, int antiguedad, String modelo, List<Pieza> piezas, Trabajador trabajador) {
         this.codigoVehiculo = codigoVehiculo;
         this.marca = marca;
         this.antiguedad = antiguedad;
         this.modelo = modelo;
-        this.piezas = null;
+        this.piezas = piezas;
+        this.trabajador = trabajador;
     }
 
     public int getCodigoVehiculo() {
@@ -85,7 +87,8 @@ public class Vehiculo {
                 ", marca='" + marca + '\'' +
                 ", antiguedad=" + antiguedad +
                 ", modelo='" + modelo + '\'' +
-                ", piezas='" + piezas + '\'' +
+                ", piezas=" + piezas +
+                ", trabajador=" + trabajador +
                 '}';
     }
 }
