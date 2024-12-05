@@ -13,22 +13,15 @@ import java.util.List;
 public class ClienteDAO {
     private final static String FINDBYPIECE = "SELECT IdPieza FROM pieza WHERE IdPieza=?";
     private final static String FINDBYDNI = "SELECT Dni FROM cliente WHERE Dni =?";
-    private final static String DELETE = "DELETE FROM cliente WHERE Dni=?";
+
     private final static String INSERT = "INSERT INTO cliente (Dni,Nombre,Correo,Telefono,Direccion,Contrasena) VALUES (?,?,?,?,?,?)";
 
     //JOIN buscar el vehiculo x y que muestre ese vehiculo y las piezas de ese vehiculo --private final static String FINDBYVEHICLE = "SELECT CodigoVehiculo ";
     private final static String FINDALLPIECES = "SELECT IdPieza,CodigoVehiculo,Nombre,Tipo,Precio FROM pieza WHERE DniCliente=?";
 
+    //JOIN buscar la pieza x por su id para que el usuario sepa el tipo de vehiculo de donde es la pieza y el nombre de esta --private final static String FINDTHEPIECE = "SELECT IdPieza,CodigoVeehiculo,Nombre,Tipo FROM pieza WHERE IdPieza=?";
 
-    public Cliente delete(Cliente entity) throws SQLException {
-        if (entity != null) {
-            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETE)) {
-                pst.setString(1, entity.getDni());
-                pst.executeUpdate();
-            }
-        }
-        return entity;
-    }
+
 
     public Cliente findByDni(String dni) {
         Cliente result = new Cliente();
@@ -89,6 +82,23 @@ public class ClienteDAO {
             e.printStackTrace();
         }
         return piezas;
+    }
+    public Pieza findByPiece(String idPieza) {
+        Pieza result = new Pieza();
+        if (idPieza != null) {
+            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYPIECE)) {
+                pst.setString(1, idPieza);
+                ResultSet res = pst.executeQuery();
+                if (res.next()) {
+                    result.setIdPieza(res.getInt("IdPieza"));
+                    result.setNombre(res.getString("Nombre"));
+                }
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
     }
     public static ClienteDAO build(){
         return new ClienteDAO();

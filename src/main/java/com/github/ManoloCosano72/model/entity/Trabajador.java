@@ -6,7 +6,6 @@ import java.util.Objects;
 public class Trabajador extends Usuario{
     private int idTrabajador;
     private String puesto;
-
     private List<Vehiculo> vehiculos;
 
     public Trabajador(String nombre, String correo, String contrasena, boolean esTrabajador) {
