@@ -5,25 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="184fbfbd-1379-4ff8-8cbf-8675d548d197" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/connection.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/connection/ConnectionMariaDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/connection/ConnectionProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/connection/XMLManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/test/LoadConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/test/TestClienteInsert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/AnadirPiezaLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/BuscarPiezaExactaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/InicioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/QuitarPiezaLista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/view/TrabajadorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/anadirPiezaLista.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/buscarPiezaExacta.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/inicio.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/quitarPiezaLista.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/registrer.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/github/ManoloCosano72/trabajador.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/Seguridad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/utils/Seguridad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/Sesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/utils/Sesion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/connection/ConnectionSQL.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/ClienteDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/PiezaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/PiezaDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/TrabajadorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/dao/TrabajadorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Trabajador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Trabajador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/ManoloCosano72/model/test/Test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,15 +30,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -51,27 +51,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.ConexionBasica.executor": "Run",
-    "Application.LoadConnection.executor": "Run",
-    "Application.TestClienteInsert.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "manolo",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Manuel/IdeaProjects/SQLACDAT/target/classes/com/github/ManoloCosano72/utils",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ConexionBasica.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoadConnection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestClienteInsert.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;manolo&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Manuel/IdeaProjects/SQLACDAT/src/main/java/com/github/ManoloCosano72&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Manuel/IdeaProjects/SQLACDAT/target/classes/com/github/ManoloCosano72/utils&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Manuel\IdeaProjects\SQLACDAT\target\classes\com\github\ManoloCosano72\utils" />
@@ -80,6 +81,7 @@
       <recent name="C:\Users\Manuel\IdeaProjects\SQLACDAT\src\main\resources\com\github\ManoloCosano72" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Manuel\IdeaProjects\SQLACDAT\src\main\resources\com\github\ManoloCosano72" />
       <recent name="C:\Users\Manuel\IdeaProjects\SQLACDAT\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -105,6 +107,8 @@
       <workItem from="1732693384072" duration="928000" />
       <workItem from="1732817064243" duration="3753000" />
       <workItem from="1733228102568" duration="4515000" />
+      <workItem from="1733302037632" duration="11941000" />
+      <workItem from="1733396967353" duration="2083000" />
     </task>
     <servers />
   </component>
