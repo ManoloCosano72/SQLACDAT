@@ -26,6 +26,12 @@ public class Pieza {
         this.idPieza = idPieza;
         this.nombre = nombre;
     }
+    public Pieza(int idPieza,String nombre,String tipo, int precio){
+        this.idPieza = idPieza;
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.precio = precio;
+    }
 
     public int getIdPieza() {
         return idPieza;

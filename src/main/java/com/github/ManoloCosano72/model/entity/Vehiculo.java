@@ -17,6 +17,14 @@ public class Vehiculo {
 
     public Vehiculo() {
     }
+    public Vehiculo(int codigoVehiculo, String marca, int antiguedad, String modelo,Trabajador trabajador) {
+        this.codigoVehiculo = codigoVehiculo;
+        this.marca = marca;
+        this.antiguedad = antiguedad;
+        this.modelo = modelo;
+        this.trabajador = trabajador;
+    }
+
 
     public Vehiculo(int codigoVehiculo, String marca, int antiguedad, String modelo, List<Pieza> piezas, Trabajador trabajador) {
         this.codigoVehiculo = codigoVehiculo;

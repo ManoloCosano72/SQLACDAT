@@ -21,6 +21,14 @@ public class Trabajador extends Usuario{
 
     public Trabajador() {
     }
+    public Trabajador(int idTrabajador){
+        this.idTrabajador=idTrabajador;
+    }
+    public Trabajador(String nombre, String correo, String contrasena,int idTrabajador, String puesto){
+        super(nombre,correo,contrasena);
+        this.idTrabajador = idTrabajador;
+        this.puesto = puesto;
+    }
 
     public int getIdTrabajador() {
         return idTrabajador;
