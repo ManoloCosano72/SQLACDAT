@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TrabajadorDAO {
-    private final static String INSERT = "INSERT INTO trabajo (Id,Puesto,Tipo,Precio) VALUES (?,?,?,?)";
+    private final static String INSERT = "INSERT INTO trabajador (Id,Puesto,Nombre,Correo,Contrasena) VALUES (?,?,?,?,?)";
     private final static String FINDBYID = "SELECT Id FROM trabajador WHERE Id=?";
     private final static String FINDALLCLIENTS = "SELECT Dni,Nombre,Telefono,Direccion FROM cliente WHERE Dni=?";
     private final static String FINDALLVEHICLES = "";
@@ -62,7 +62,7 @@ public class TrabajadorDAO {
         return entity;
     }
 
-    public List<Pieza> findAllPieces() {
+    /**public List<Pieza> findAllPieces() {
         List<Pieza> piezas = new ArrayList<>();
         try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(-------)) {
             ResultSet res = pst.executeQuery();
@@ -71,7 +71,7 @@ public class TrabajadorDAO {
                 p.setIdPieza(res.getInt("IdPieza"));
                 /** codigo vehiculo me falta el findByCodVehiculo en el DAO
                  p.setvehiculo(VehiculoDAO.build().findByCodVehiculo(res.getString("CodigoVehiculo")));
-                 **/
+
                 p.setNombre(res.getString("Nombre"));
                 p.setTipo(res.getString("Tipo"));
                 p.setPrecio(res.getInt("Precio"));
@@ -80,8 +80,9 @@ public class TrabajadorDAO {
             e.printStackTrace();
         }
         return piezas;
-    }
-    public Pieza findByPiece(String idPieza) {
+    }**/
+
+    /**public Pieza findByPiece(String idPieza) {
         Pieza result = new Pieza();
         if (idPieza != null) {
             try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(-------)) {
@@ -97,7 +98,7 @@ public class TrabajadorDAO {
             }
         }
         return result;
-    }
+    }**/
     public Cliente findAllClientes(String dni) {
         Cliente result = new Cliente();
         if (dni != null) {

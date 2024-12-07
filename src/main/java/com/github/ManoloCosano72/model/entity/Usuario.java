@@ -21,6 +21,11 @@ public class Usuario {
 
     public Usuario() {
     }
+    public Usuario(String nombre, String correo, String contrasena) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.contrasena = contrasena;
+    }
 
     public String getNombre() {
         return nombre;
